@@ -1,0 +1,81 @@
+{
+    "incremental_events": {
+        "generated_task": 3000000,
+        "computed_task": 2793872,
+        "discarded_task": 206128,
+        "task_lost_rate": 6.870933333333333
+    },
+    "mean_events": {
+        "latency": 0.08970605041270764
+    },
+    "commit": "bfd3e4c73451ad21f14f2964c332465280af9508",
+    "additional_info": {
+        "simulation_time": 18568.12300634384
+    },
+    "config": {
+        "result_dir": "results/figs/1bs_cavschange2/ue_centric_full_train_1action_1000rbs_12epochs",
+        "result_name": "ue_centric_full_result-3",
+        "comment": "reward factor calculated for all connected ues",
+        "repeat": 4,
+        "range_params": null,
+        "simulation": {
+            "dt": 0.5,
+            "steps": 50000,
+            "gui_enabled": false,
+            "gui_timeout": 0.0,
+            "plot_map": false,
+            "checkpoint_every": 10000
+        },
+        "vehicles": {
+            "count": 12,
+            "speed_ms": 13.0,
+            "task": {
+                "ttl": 0.1,
+                "request_size_MB": 0.1,
+                "response_size_MB": 0.1,
+                "instruction_count": 10000000,
+                "generation_period": 0.1,
+                "generation_delay_range": 0.0,
+                "latency_reserve": 0.9
+            }
+        },
+        "base_stations": {
+            "count": 1,
+            "min_radius": 30,
+            "ips": 3000000000.0,
+            "bandwidth": 100000000.0,
+            "resource_blocks": 1000,
+            "tx_frequency": 2000000000.0,
+            "tx_power": 0.01,
+            "coverage_radius": 500.0
+        },
+        "type": "ue_centric_full",
+        "algorithm": {
+            "agent": {
+                "action_count": 1,
+                "buffer_size": 20000,
+                "min_buffer_size": 4000,
+                "batch_size": 32,
+                "lr": 0.0005,
+                "target_update_tau": 0.9,
+                "gamma": 0.9,
+                "epsilon": 0.1,
+                "epsilon_decay_factor": 0.9999,
+                "epsilon_min": 0.05,
+                "epochs": 12,
+                "state_dim": -1
+            },
+            "reward": "reward_v9",
+            "nn_linear_layers": [
+                256,
+                256
+            ],
+            "nn_gcn_layers": [
+                64
+            ],
+            "is_training": true,
+            "gcn_aggregator": "mean",
+            "agent_nn_models_path": null
+        }
+    }
+}

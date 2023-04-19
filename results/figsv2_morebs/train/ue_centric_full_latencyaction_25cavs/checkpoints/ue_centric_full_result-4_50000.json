@@ -1,0 +1,13 @@
+{
+    "incremental_events": {
+        "generated_task": 6250125,
+        "computed_task": 4303914,
+        "discarded_task": 1946174,
+        "task_lost_rate": 31.138345572094345
+    },
+    "mean_events": {
+        "latency": 0.08701341363311732
+    },
+    "commit": "15b4d9e62d227fdea4b2a04c13c473be22151c2f",
+    "additional_info": {}
+}

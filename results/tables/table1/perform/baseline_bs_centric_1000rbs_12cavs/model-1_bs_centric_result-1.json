@@ -1,0 +1,89 @@
+{
+    "incremental_events": {
+        "generated_task": 1200000,
+        "discarded_task": 71147,
+        "computed_task": 1128853,
+        "task_lost_rate": 5.928916666666666
+    },
+    "mean_events": {
+        "latency": 0.08965336668871693
+    },
+    "commit": "15b4d9e62d227fdea4b2a04c13c473be22151c2f",
+    "additional_info": {
+        "simulation_time": 409.59255266189575
+    },
+    "config": {
+        "result_dir": "results/figs/1bs_cavschange5_oldsinr_perform/baseline_bs_centric_1000rbs_12cavs",
+        "result_name": "model-1_bs_centric_result-1",
+        "comment": "",
+        "repeat": 2,
+        "range_params": {
+            "algorithm.agent_nn_models_path": {
+                "range": [
+                    "results/figs/1bs_cavschange5_oldsinr/baseline_bs_centric_1000rbs_12cavs/agent_nns/bs_centric_result-1_agent_nn",
+                    "results/figs/1bs_cavschange5_oldsinr/baseline_bs_centric_1000rbs_12cavs/agent_nns/bs_centric_result-2_agent_nn"
+                ],
+                "name": "model"
+            }
+        },
+        "simulation": {
+            "dt": 0.5,
+            "steps": 20000,
+            "gui_enabled": false,
+            "gui_timeout": 0.0,
+            "plot_map": false,
+            "checkpoint_every": 10000
+        },
+        "vehicles": {
+            "count": 12,
+            "speed_ms": 13.0,
+            "task": {
+                "ttl": 0.1,
+                "request_size_MB": 0.1,
+                "response_size_MB": 0.1,
+                "instruction_count": 10000000,
+                "generation_period": 0.1,
+                "generation_delay_range": 0.0,
+                "latency_reserve": 0.9
+            }
+        },
+        "base_stations": {
+            "count": 1,
+            "min_radius": 30,
+            "ips": 3000000000.0,
+            "bandwidth": 100000000.0,
+            "resource_blocks": 1000,
+            "tx_frequency": 2000000000.0,
+            "tx_power": 0.01,
+            "coverage_radius": 500.0
+        },
+        "type": "bs_centric",
+        "algorithm": {
+            "agent": {
+                "action_count": 1,
+                "buffer_size": 20000,
+                "min_buffer_size": 4000,
+                "batch_size": 32,
+                "lr": 0.0005,
+                "target_update_tau": 0.9,
+                "gamma": 0.9,
+                "epsilon": 0.1,
+                "epsilon_decay_factor": 0.9999,
+                "epsilon_min": 0.05,
+                "epochs": 1,
+                "state_dim": -1
+            },
+            "reward": "reward_v5",
+            "nn_linear_layers": [
+                256,
+                256
+            ],
+            "nn_gcn_layers": [
+                64
+            ],
+            "is_training": false,
+            "gcn_aggregator": "mean",
+            "agent_nn_models_path": "results/figs/1bs_cavschange5_oldsinr/baseline_bs_centric_1000rbs_12cavs/agent_nns/bs_centric_result-2_agent_nn"
+        }
+    }
+}

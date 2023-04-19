@@ -1,0 +1,80 @@
+{
+    "incremental_events": {
+        "generated_task": 350000,
+        "computed_task": 349989,
+        "discarded_task": 11,
+        "task_lost_rate": 0.003142857142857143
+    },
+    "mean_events": {
+        "latency": 0.08969307999640794
+    },
+    "commit": "1a8c31483ab2c6bff11ab784f203848d50021619",
+    "additional_info": {
+        "simulation_time": 131.79405665397644
+    },
+    "config": {
+        "result_dir": "results/figs/1bs_cavschange_perform/baseline_bs_centric_perform_1000rbs_2",
+        "result_name": "bs_centric_result-3",
+        "comment": "",
+        "repeat": 4,
+        "range_params": null,
+        "simulation": {
+            "dt": 0.5,
+            "steps": 10000,
+            "gui_enabled": false,
+            "gui_timeout": 0.0,
+            "plot_map": false,
+            "checkpoint_every": 10000
+        },
+        "vehicles": {
+            "count": 7,
+            "speed_ms": 13.0,
+            "task": {
+                "ttl": 0.1,
+                "request_size_MB": 0.1,
+                "response_size_MB": 0.1,
+                "instruction_count": 10000000,
+                "generation_period": 0.1,
+                "generation_delay_range": 0.0,
+                "latency_reserve": 0.9
+            }
+        },
+        "base_stations": {
+            "count": 1,
+            "min_radius": 30,
+            "ips": 3000000000.0,
+            "bandwidth": 100000000.0,
+            "resource_blocks": 1000,
+            "tx_frequency": 2000000000.0,
+            "tx_power": 0.01,
+            "coverage_radius": 500.0
+        },
+        "type": "bs_centric",
+        "algorithm": {
+            "agent": {
+                "action_count": 1,
+                "buffer_size": 20000,
+                "min_buffer_size": 4000,
+                "batch_size": 32,
+                "lr": 0.0005,
+                "target_update_tau": 0.9,
+                "gamma": 0.9,
+                "epsilon": 0.1,
+                "epsilon_decay_factor": 0.9999,
+                "epsilon_min": 0.05,
+                "epochs": 1
+            },
+            "reward": "reward_v5",
+            "nn_linear_layers": [
+                256,
+                256
+            ],
+            "nn_gcn_layers": [
+                64
+            ],
+            "is_training": false,
+            "gcn_aggregator": "mean",
+            "agent_nn_models_path": "results/figs/1bs_cavschange/baseline_bs_centric_train_1000rbs_2/agent_nns/bs_centric_result-3_agent_nn"
+        }
+    }
+}

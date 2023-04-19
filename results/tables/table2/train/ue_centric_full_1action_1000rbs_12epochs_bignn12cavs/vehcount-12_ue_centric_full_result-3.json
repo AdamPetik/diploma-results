@@ -1,0 +1,89 @@
+{
+    "incremental_events": {
+        "generated_task": 6000000,
+        "computed_task": 5518769,
+        "discarded_task": 481231,
+        "task_lost_rate": 8.020516666666666
+    },
+    "mean_events": {
+        "latency": 0.08365487662672545
+    },
+    "commit": "15b4d9e62d227fdea4b2a04c13c473be22151c2f",
+    "additional_info": {
+        "simulation_time": 50859.41125535965
+    },
+    "config": {
+        "result_dir": "results/figs/1bs_cavschange_latencyaction_oldsinr/ue_centric_full_1action_1000rbs_12epochs_bignn2",
+        "result_name": "vehcount-12_ue_centric_full_result-3",
+        "comment": "reward factor calculated for all connected ues",
+        "repeat": 4,
+        "range_params": {
+            "vehicles.count": {
+                "range": [
+                    12,
+                    15
+                ],
+                "name": "vehcount"
+            }
+        },
+        "simulation": {
+            "dt": 0.5,
+            "steps": 100000,
+            "gui_enabled": false,
+            "gui_timeout": 0.0,
+            "plot_map": false,
+            "checkpoint_every": 5000
+        },
+        "vehicles": {
+            "count": 12,
+            "speed_ms": 13.0,
+            "task": {
+                "ttl": 0.1,
+                "request_size_MB": 0.1,
+                "response_size_MB": 0.1,
+                "instruction_count": 10000000,
+                "generation_period": 0.1,
+                "generation_delay_range": 0.0,
+                "latency_reserve": 0.9
+            }
+        },
+        "base_stations": {
+            "count": 1,
+            "min_radius": 30,
+            "ips": 3000000000.0,
+            "bandwidth": 100000000.0,
+            "resource_blocks": 1000,
+            "tx_frequency": 2000000000.0,
+            "tx_power": 0.01,
+            "coverage_radius": 500.0
+        },
+        "type": "ue_centric_full",
+        "algorithm": {
+            "agent": {
+                "action_count": 2,
+                "buffer_size": 20000,
+                "min_buffer_size": 4000,
+                "batch_size": 32,
+                "lr": 0.0005,
+                "target_update_tau": 0.9,
+                "gamma": 0.9,
+                "epsilon": 0.1,
+                "epsilon_decay_factor": 0.9999,
+                "epsilon_min": 0.05,
+                "epochs": 12,
+                "state_dim": -1
+            },
+            "reward": "reward_v8",
+            "nn_linear_layers": [
+                512,
+                512
+            ],
+            "nn_gcn_layers": [
+                128
+            ],
+            "is_training": true,
+            "gcn_aggregator": "mean",
+            "agent_nn_models_path": null
+        }
+    }
+}

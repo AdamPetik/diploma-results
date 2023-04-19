@@ -1,0 +1,65 @@
+{
+    "incremental_events": {
+        "generated_task": 400000,
+        "computed_task": 394730,
+        "discarded_task": 5270,
+        "task_lost_rate": 1.3175
+    },
+    "mean_events": {
+        "latency": 0.05439354106789447
+    },
+    "commit": "15b4d9e62d227fdea4b2a04c13c473be22151c2f",
+    "additional_info": {
+        "simulation_time": 219.86061930656433
+    },
+    "config": {
+        "result_dir": "results/1bs_baseline/run1",
+        "result_name": "vehcount-8_baseline_result-1",
+        "comment": "Test Config",
+        "repeat": 2,
+        "range_params": {
+            "vehicles.count": {
+                "range": [
+                    8,
+                    10,
+                    12,
+                    14
+                ],
+                "name": "vehcount"
+            }
+        },
+        "simulation": {
+            "dt": 0.5,
+            "steps": 10000,
+            "gui_enabled": false,
+            "gui_timeout": 0.0,
+            "plot_map": false,
+            "checkpoint_every": 5000
+        },
+        "vehicles": {
+            "count": 8,
+            "speed_ms": 13.0,
+            "task": {
+                "ttl": 0.1,
+                "request_size_MB": 0.1,
+                "response_size_MB": 0.1,
+                "instruction_count": 10000000,
+                "generation_period": 0.1,
+                "generation_delay_range": 0.0,
+                "latency_reserve": 0.9
+            }
+        },
+        "base_stations": {
+            "count": 1,
+            "min_radius": 30,
+            "ips": 3000000000.0,
+            "bandwidth": 100000000.0,
+            "resource_blocks": 1000,
+            "tx_frequency": 2000000000.0,
+            "tx_power": 0.01,
+            "coverage_radius": 500.0
+        },
+        "type": "baseline",
+        "algorithm": null
+    }
+}
